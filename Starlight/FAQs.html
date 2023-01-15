@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FAQs</title>
+<style>
+body{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url("https://www.mountkinabalu.com/includes/rs-plugin/images/mountkinabalu-full.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+nav{
+  width: 100%;
+  background: white;
+  overflow:auto;
+}
+
+ul{
+  padding: 0;
+  margin: 0 0 0 150px;
+  list-style: none;
+}
+
+li{
+  float:left;
+}
+
+.logo img{
+  position: absolute;
+  margin-top:0px;
+  margin-left:10px;
+  margin-bottom:0px;
+}
+
+nav a{
+  width:100px;
+  display:block;
+  padding: 20px 15px;
+  text-decoration: none;
+  font-family: Arial;
+  color: black;
+  text-align: center;
+}
+
+nav a:hover{
+  background: #0081C9;
+  transition: 0.5s;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 20%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 60%;
+  background-color: white;
+  height: 100%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+
+table, th, td {
+border: 1px solid white;
+border-collapse: collapse;
+background-color: white;
+}
+</style>
+</head>
+<body>
+<div class = "logo"><img src = "image/logo1.jpg">
+</div>
+
+<nav>
+  <ul>
+    <li><a href = "#"> Home </a></li>
+    <li><a href = "#"> Account </a></li>
+    <li><a href = "#"> Product </a></li>
+    <li><a href = "#"> Others </a></li>
+    <li><a href = "#"> FAQs </a></li>
+  </ul>
+</nav>
+
+<div class="row">
+  <div class="column side">
+  </div>
+
+  <div class="column middle">
+    <div class="a img">
+    <img src = "https://cdn.shopify.com/app-store/listing_images/be8e18fe7fd62b265563360c2986633d/banner/CNbd3rn0lu8CEAE=.jpg" width="600px" height="450px">
+    <br><br>
+   <table style="width:100%">
+      <tr>
+        <th><a href = "about us.html"> About Us </a></th>
+        <th><a href = "social media.html"> Social Media </a></th>
+        <th><a href = "message.html"> Message </a></th>
+        <th><a href = "jamak prayer.html"> Jamak Prayer </a></th>
+      </tr>
+    </table>
+    <br><br>
+  </div>
+
+</div>
+
+</body>
+</html>

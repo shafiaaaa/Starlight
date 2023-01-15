@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kedah</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<style>
+
+:root{
+    --blue:#3399ff;
+    --black:#000000;
+    --grey:#d1d1e0;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border:.2rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background:url("https://www.mountkinabalu.com/includes/rs-plugin/images/mountkinabalu-full.jpg");
+}
+
+section{
+    padding:2rem 9%;
+}
+
+.heading{
+    text-align: center;
+    padding:2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color:var(--black);
+}
+
+.heading span{
+    background: #d1d1e0;
+    color:#fff;
+    display: inline-block;
+    padding:.5rem 3rem;
+    clip-path: polygon(100% 0, 100% 99%, 0% 100%, 0% 0%);
+}
+
+hr {
+  border:none;
+  background:#E0E4CC;
+  height:1px;
+}
+
+h1{
+    margin: 12px;
+}
+
+table {
+  margin-bottom:1em;
+  border-collapse:collapse;
+}
+table td, table th {
+  text-align:left;
+  padding:0.25em 1em;
+}
+
+#carttotals {
+  margin-right:0;
+  margin-left:auto;
+}
+
+.cart-buttons {
+  width:auto;
+  margin-right:0;
+  margin-left:auto;
+  display:flex;
+  justify-content:flex-end;
+  padding:1em 0;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:.8rem 1rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border:.2rem solid var(--black);
+    color:var(--black);
+    cursor: pointer;
+    background: none;
+}
+
+.btn:hover{
+    background: #130f40;
+    color:#fff;
+}
+
+.header{
+    position: fixed;
+    top:0; left:0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+    background:#fff;
+    box-shadow: var(--box-shadow);
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    margin:0 1rem;
+    color:var(--black);
+}
+
+.header .navbar a:hover{
+    color:var(--blue);
+}
+
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color:var(--black);
+    font-size: 2rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .icons div:hover{
+    background: var(--grey);
+    color:#fff;
+}
+
+.header .shopping-cart{
+    position: absolute;
+    top:110%; right:-110%;
+    padding:1rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width:35rem;
+    background: #fff;
+}
+
+.header .shopping-cart.active{
+    right:2rem;
+    transition: .4s linear;
+}
+
+.header .shopping-cart .box{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    position: relative;
+    margin:1rem 0;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+}
+
+.home .content{
+    text-align: center;
+    width:60rem;
+}
+
+
+.packages .box-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap:8rem;
+}
+
+.packages .box-container .box{
+  height: 10%;
+  width: 20%;
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  background: #fff;
+}
+
+.packages .box-container .box img{
+  height: 80%;
+  width: 100%;
+
+}
+
+.packages .box-container .box .content{
+  padding:2rem;
+}
+
+.packages .box-container .box .content h3{
+  font-size:2rem;
+  color:#333;
+}
+
+.packages .box-container .box .content p{
+  font-size:1.7rem;
+  color:#666;
+  padding:1rem 0;
+}
+
+.packages .box-container .box .content .price{
+  font-size: 2rem;
+  color:#333;
+  padding-top: 1rem;
+}
+
+.packages .box-container .box .content .price span{
+  color:#666;
+  font-size: 1.5rem;
+}
+
+</style>
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header class="header">
+
+  <img src="media/Starlight Logo.png" style="width:7%">
+
+
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#account">Account</a>
+        <a href="#products">Products</a>
+        <a href="#others">Others</a>
+        <a href="#faqs">FAQs</a>
+    </nav>
+
+    <div class="icons">
+        <div class="fas fa-shopping-cart" id="cart-btn"></div>
+    </div>
+
+    <div class="shopping-cart">
+      <h2>Cart</h2> <br> </br>
+      <table>
+        <thead>
+          <tr>
+          <th><span class="product">Product</span></th>
+          <th><span class="price">Price</span></th>
+        </tr>
+        </thead>
+        <tbody id="carttable">
+        </tbody>
+      </table>
+      <hr>
+      <table id="carttotals">
+        <tr>
+          <td><strong>Items</strong></td>
+          <td><strong>Total</strong></td>
+        </tr>
+        <tr>
+          <td>x <span id="itemsquantity">0</span></td>
+
+          <td>RM<span id="total">0</span></td>
+        </tr></table>
+
+
+      <div class="cart-buttons">
+        <a href="payment.html" class="btn">checkout</a>
+      </div>
+    </div>
+
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+
+<!-- packages section starts  -->
+
+<section class="packages" id="packages">
+
+    <h1 class="heading">
+        <span>Kedah</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="media/Kedah(1).png" alt="">
+            <div class="content">
+                <h3> 6 Days 5 Nights </h3>
+                <p class="productname">Langkawi</p>
+                <div class="price"> RM1800 <span>/per person</span> </div>
+                <a href="#" class="btn" class="addtocart" onclick="myAddtocart()">Book Now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="media/Kedah(2).png" alt="">
+            <div class="content">
+                <h3> 2 Days 1 Night </h3>
+                <p class="productname">Alor Setar</p>
+                <div class="price"> RM300 <span>/per person</span> </div>
+                <a href="#" class="btn" class="addtocart" onclick="myAddtocart()">Book Now</a>
+            </div>
+        </div>
+
+
+    </div>
+
+</section>
+
+<!-- package section ends -->
+
+
+<script>
+
+let shoppingCart = document.querySelector('.shopping-cart');
+
+document.querySelector('#cart-btn').onclick = () =>{
+    shoppingCart.classList.toggle('active');
+}
+
+function myAddtocart() {
+  alert("Added to cart!");
+}
+
+</script>
+
+
+</body>
+</html>

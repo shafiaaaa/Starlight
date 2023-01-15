@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Message</title>
+<style>
+
+body{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url("https://www.mountkinabalu.com/includes/rs-plugin/images/mountkinabalu-full.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+nav{
+  width: 100%;
+  background: white;
+  overflow:auto;
+}
+
+ul{
+  padding: 0;
+  margin: 0 0 0 150px;
+  list-style: none;
+}
+
+li{
+  float:left;
+}
+
+.logo img{
+  position: absolute;
+  margin-top:0px;
+  margin-left:10px;
+  margin-bottom:0px;
+}
+
+nav a{
+  width:100px;
+  display:block;
+  padding: 20px 15px;
+  text-decoration: none;
+  font-family: Arial;
+  color: black;
+  text-align: center;
+}
+
+nav a:hover{
+  background: #0081C9;
+  transition: 0.5s;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 20%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 60%;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.6)50%, rgba(255, 255, 255, 0.6)50%);
+  height: 100%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+
+h1{
+  text-align: center;
+}
+
+input[type=text]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=email]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea{
+  width: 100%;
+  background-color: white;
+  margin: auto;
+  font-style: "Poppins", sans-serif;
+}
+
+button {
+  width: 100%;
+  background-color: #2C74B3;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3C79F5;
+}
+
+</style>
+</head>
+<body>
+<div class = "logo"><img src = "image/logo1.jpg">
+</div>
+<nav>
+  <ul>
+    <li><a href = "#"> Home </a></li>
+    <li><a href = "#"> Account </a></li>
+    <li><a href = "#"> Product </a></li>
+    <li><a href = "#"> Others </a></li>
+    <li><a href = "#"> FAQs </a></li>
+  </ul>
+</nav>
+
+<div class="row">
+  <div class="column side">
+  </div>
+  <div class="column middle">
+    <h1>Message</h2>
+
+    <div>
+      <form
+        <label for="operator"><img src="https://cdn-icons-png.flaticon.com/512/263/263240.png" style="width:10%;">Operator:</label>
+        <input type="text" id="operator" name="operator" placeholder="Welcome to Starlight Traveling. How can we help you?" readonly>
+
+        <img src=" https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png" style="width:10%;">You:</label>
+        <label for="email"></label><br>
+        <input type="email" id="email" name="email" placeholder="Type your email" required><br><br>
+        <textarea id="customer" name="customer" rows="5" placeholder="Type here" required></textarea>
+
+      </form><br><br><br>
+      <button onclick="myFunction()">Submit</button>
+  </div>
+  <br><br><br>
+
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  alert("Your message already sent! We will contact you through Email.");
+}
+</script>
+
+
+</body>
+</html>
